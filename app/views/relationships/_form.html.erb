@@ -1,0 +1,57 @@
+<%= form_for(@relationship) do |f| %>
+  <% if @relationship.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@relationship.errors.count, "error") %> prohibited this relationship from being saved:</h2>
+
+      <ul>
+      <% @relationship.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :client_id %><br>
+    <%= f.number_field :client_id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :firstname %><br>
+    <%= f.text_field :firstname %>
+  </div>
+  <div class="field">
+    <%= f.label :relationship_type %><br>
+    <%= f.number_field :relationship_type %>
+  </div>
+  <div class="field">
+    <%= f.label :since %><br>
+    <%= f.datetime_select :since %>
+  </div>
+  <div class="field">
+    <%= f.label :deleted_since %><br>
+    <%= f.datetime_select :deleted_since %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_area :address %>
+  </div>
+  <div class="field">
+    <%= f.label :domicile %><br>
+    <%= f.number_field :domicile %>
+  </div>
+  <div class="field">
+    <%= f.label :nationality %><br>
+    <%= f.number_field :nationality %>
+  </div>
+  <div class="field">
+    <%= f.label :birthdate %><br>
+    <%= f.date_select :birthdate %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

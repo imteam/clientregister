@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @relationship.account_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @relationship.name %>
+</p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @relationship.firstname %>
+</p>
+
+<p>
+  <strong>Relationship type:</strong>
+  <%= @relationship.relationship_type %>
+</p>
+
+<p>
+  <strong>Since:</strong>
+  <%= @relationship.since %>
+</p>
+
+<p>
+  <strong>Deleted since:</strong>
+  <%= @relationship.deleted_since %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @relationship.address %>
+</p>
+
+<p>
+  <strong>Domicile:</strong>
+  <%= @relationship.domicile %>
+</p>
+
+<p>
+  <strong>Nationality:</strong>
+  <%= @relationship.nationality %>
+</p>
+
+<p>
+  <strong>Birthdate:</strong>
+  <%= @relationship.birthdate %>
+</p>
+
+<%= link_to 'Edit', edit_relationship_path(@relationship) %> |
+<%= link_to 'Back', relationships_path %>
